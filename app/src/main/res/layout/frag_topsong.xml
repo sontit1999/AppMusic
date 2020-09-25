@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+          <variable
+              name="viewmodel"
+              type="com.example.appmusic.fragment.TopSongViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTopBXH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top BXH Zingmp3"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textSizeTitle"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvNumberSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100 bài hát"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTopBXH" />
+        <Button
+            android:id="@+id/btnPlayRandom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phát ngẫu nhiên"
+            android:layout_margin="50dp"
+            android:textColor="@color/colorwhite"
+            android:paddingHorizontal="30dp"
+            android:background="@drawable/bg_button_play_random"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTopBXH" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSong"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPlayRandom" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
